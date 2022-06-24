@@ -1,7 +1,7 @@
 <template>
   <div class="app" id="app">
     <div class="users">
-      <h1>Medarbejder kartotek</h1>
+      <h1>Medarbejderkartotek</h1>
       <my-input v-model="searchQuery" placeholder="Search..."/>
       <div class="app__btns">
         <my-button @click="showDialog">Opret medarbejder</my-button>
