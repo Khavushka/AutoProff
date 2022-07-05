@@ -1,11 +1,11 @@
 <template>
         <form @submit.prevent>
           <h4>Tilføje medarbejder</h4>
-          <my-input
+          <select
             v-model="user.company"
-            class="input"
-            type="text"
-            placeholder="Afdeling"/>
+            placeholder="Afdeling">
+              <option v-for="company in companys">{{ company }}</option>
+            </select>
           <my-input 
             v-model="user.name"
             class="input" 
@@ -40,7 +40,8 @@ export default {
         name: '',
         title: '',
         phone: ''
-      }
+      },
+      companys:['Syd', 'Vest', 'Øst']
     }
   },
   methods: {
