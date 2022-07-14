@@ -1,9 +1,10 @@
 <template>
         <form @submit.prevent>
           <h4>Tilføje medarbejder</h4>
-          <select
+          <select class="select_select"
             v-model="user.company"
-            placeholder="Afdeling">
+            placeholder="Afdeling" value>
+              <option disabled value="">Afdeling</option>
               <option v-for="company in companys">{{ company }}</option>
             </select>
           <my-input 
@@ -63,5 +64,11 @@ export default {
 form {
   display: flex;
   flex-direction: column;
+}
+.select_select {
+    width: 100%;
+    border: 1px solid green;
+    padding: 10px 15px;
+    margin-top: 15px;
 }
 </style>
